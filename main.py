@@ -13,7 +13,10 @@ def eliminareDuplicate(l):
     l - o lista citita de la tastatura
     return - lista fara valorile duplicate
     """
-    pass
+    rezolvare = []
+    for i in l:
+        if i not in rezolvare: rezolvare.append(int(i))
+    return rezolvare
 
 
 def main():
@@ -26,8 +29,7 @@ def main():
         if optiune == "1":
             l = citireLista()
         elif optiune == "2":
-            l = eliminareDuplicate(l)
-            print(l)
+            print(eliminareDuplicate(l))
         elif optiune == "x":
             break
         else: print("Optiune invalida!")
